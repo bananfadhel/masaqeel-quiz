@@ -40,17 +40,13 @@ VITE_SUPABASE_ANON_KEY=your-anon-public-key
 ### 4. Run the dev server
 
 ```bash
+
+npm install
 npm run dev
+
 ```
 
 Open http://localhost:5173
-
-### 5. Build for production
-
-```bash
-npm run build
-npm run preview
-```
 
 ---
 
