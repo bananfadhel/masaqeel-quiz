@@ -79,19 +79,21 @@ Open http://localhost:5173
 
 ## Scoring Logic
 
-Score per question drops by exactly 10 points for each word revealed, ensuring speed is rewarded:
+Score is calculated based on how early the player answers relative to the total number of words revealed.
+
+The earlier the answer, the higher the score. The later the answer, the lower the score — regardless of question length.
 
 ```
-score = max(10, 100 - ((revealedAt - 1) * 10))
+score = max(10, round(100 - ((revealedAt / totalWords) * 90)))
 ```
 
-- Answer at word 1 → 100 pts  
-- Answer at word 2 → 90 pts  
-- Answer at word 3 → 80 pts  
-- Minimum score for a correct answer → 10 pts  
-- Wrong answer or timeout → 0 pts  
+- Answer at the very beginning → **100 pts**
+- Answer around the middle → ~**50–60 pts**
+- Answer near the end → ~**10–20 pts**
+- Minimum score for a correct answer → **10 pts**
+- Wrong answer or timeout → **0 pts**
 
----
+> This proportional scoring ensures fairness across questions of different lengths.
 
 ## Project Structure
 

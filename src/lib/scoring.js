@@ -32,6 +32,20 @@
 
 export function calculateScore(wordRevealedAt, totalWords, maxScore = 100) {
 
+  // أقل نقاط ممكنة
+  const minScore = 10
+
+  // نسبة التقدم (كم وصل من السؤال)
+  const progress = wordRevealedAt / totalWords
+
+  // نحسب الخصم كنسبة (مو ثابت)
+  const score = Math.round(
+    maxScore - (progress * (maxScore - minScore))
+  )
+
+  // نضمن ما ينزل تحت الحد الأدنى
+  return Math.max(minScore, score)
+
   /*
   الخصم: لكل كلمة يتم كشفها تنقص 10 نقاط
   */
