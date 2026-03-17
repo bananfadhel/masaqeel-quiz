@@ -26,6 +26,9 @@ This will:
 ### 3. Configure environment variables
 
 ```
+bash
+cp .env.example .env
+``````
 
 Edit `.env` with your Supabase credentials (found in Project Settings → API):
 
