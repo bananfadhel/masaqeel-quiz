@@ -9,7 +9,6 @@ A web-based quiz game built with React and Supabase. Questions reveal word by wo
 ```bash
 git clone https://github.com/bananfadhel/masaqeel-quiz.git
 cd masaqeel-quiz
-npm install
 ```
 
 ### 2. Set up Supabase
