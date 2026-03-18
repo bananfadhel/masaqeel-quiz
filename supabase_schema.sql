@@ -125,7 +125,7 @@ from q,
 with q as (
   insert into questions (question_text, correct_answer)
   values (
-    'أي مدينة سعودية كانت عاصمة المملكة العربية السعودية الاولى الأولى؟',
+    'ما هي المدينة السعودية اللتي كانت عاصمة المملكة العربية السعودية الأولى؟',
     'الدرعية'
   )
   returning id
