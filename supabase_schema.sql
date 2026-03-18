@@ -125,7 +125,7 @@ from q,
 with q as (
   insert into questions (question_text, correct_answer)
   values (
-    'أي مدينة سعودية كانت عاصمة الدولة السعودية الأولى؟',
+    'أي مدينة سعودية كانت عاصمة المملكة العربية السعودية الاولى الأولى؟',
     'الدرعية'
   )
   returning id
@@ -269,7 +269,7 @@ from q,
 with q as (
   insert into questions (question_text, correct_answer)
   values (
-    'ما اسم أعلى قمة جبلية في المملكة العربية السعودية؟',
+    'ما اسم أعلى قمة جبلية متواجدة في المملكة العربية السعودية؟',
     'جبل السودة'
   )
   returning id
