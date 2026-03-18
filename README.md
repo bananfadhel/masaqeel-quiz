@@ -114,26 +114,3 @@ src/
 ├── App.jsx
 ├── main.jsx
 └── index.css
-```
-
----
-
-## Adding More Questions
-
-Insert directly via Supabase dashboard or SQL:
-
-```sql
-with q as (
-  insert into questions (question_text, correct_answer)
-  values ('Your question text here with ten to fifteen words total?', 'Correct Answer')
-  returning id
-)
-insert into choices (question_id, text) values
-  ((select id from q), 'Correct Answer'),
-  ((select id from q), 'Wrong Option A'),
-  ((select id from q), 'Wrong Option B'),
-  ((select id from q), 'Wrong Option C');
-```
-
-Important:  
-`correct_answer` in the questions table must exactly match one of the choices.text values for that question.
